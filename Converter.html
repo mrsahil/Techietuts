@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Converter</title>
+</head>
+<body align="Center">
+
+    <h1 align="Center">Value Converter</h1>
+    <hr>
+    <hr>
+    <form border=20%>
+<p><b>Type a value in the INR  field to convert the value into Million:</b></p>
+
+<p>
+  <label>Enter Value in Indian Rupees</label>
+  <input id="inputINRValue" type="number" placeholder="Enter Rupees" oninput="valueConverter(this.value)" onchange="valueConverter(this.value)">
+</p>
+<p><b>Value in Million: <span id="MillionValue"></b></span></p>
+
+<script>
+function valueConverter(valNum) {
+  document.getElementById("MillionValue").innerHTML=valNum/1000000;
+}
+</script>
+
+</form>
+<hr>
+
+<p><b>Type a value in the Million field to convert the value into Indian Rupees:</b></p>
+
+<p>
+  <label>Enter Value in Million:</label>
+  <input id="inputMillion1Value" type="number" placeholder="Enter Million Value" oninput="valueConverter1(this.value)" onchange="valueConverter1(this.value)">
+</p>
+<p><b>Value in Indian Rupees:<span id="INR1Value"></b></span></p>
+
+<script>
+function valueConverter1(valNum1) {
+  document.getElementById("INR1Value").innerHTML=valNum1*1000000;
+}
+</script>
+
+</body>
+</html>
